@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>CSS Template</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            /*width: 100%;*/
+            /*min-height: 200vh;*/
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        /* Style the header */
+        header {
+            display: flex;
+            background-color: #666;
+            padding: 20px;
+            /*text-align: left;*/
+            font-size: 35px;
+            color: white;
+        }
+
+        header img {
+            width: 100px;
+            height: 100px;
+            margin-top: -10px;
+        }
+
+        /* Container for flexboxes */
+        section {
+            width: 100%;
+            min-height: 500px;
+            /*display: -webkit-flex;*/
+            display: flex;
+        }
+
+        nav {
+            background: #ccc;
+            padding: 20px;
+            display: inline;
+            list-style-type: none;
+            width: 25%;
+            height: auto;
+            padding-bottom: 60px;
+        }
+
+        .content {
+            width: 75%;
+            height: auto;
+            padding-bottom: 60px;
+        }
+
+        button {
+            outline: none;
+            background-color: inherit;
+            border: none;
+            font-size: 30px;
+            font-weight: 500;
+            margin-top: 20px;
+            margin-left: 20px;
+            color: #333;
+        }
+
+        button:hover {
+            color: #666;
+            cursor: pointer;
+            font-size: 35px;
+            font-weight: 600;
+        }
+
+        nav img {
+            width: auto;
+            height: 20px;
+        }
+
+        .content img {
+            width: auto;
+            height: 250px;
+        }
+
+        .citi {
+            padding: 10px;
+            background-color: #f1f1f1;
+            height: 100%;
+        }
+
+        .citi h1 {
+            font-size: 50px;
+        }
+
+        .citi p {
+            letter-spacing: 1px;
+            word-spacing: 2px;
+            line-height: 1.6;
+            text-align: justify;
+        }
+
+        .citi span {
+            font-size: 30px;
+        }
+
+        .unactive {
+            display: none;
+        }
+
+        .active {
+            display: block;
+        }
+
+        /* Style the footer */
+        footer {
+            position: fixed;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            background-color: #777;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            flex: 2;
+            letter-spacing: 1px;
+            word-spacing: 1.6px;
+        }
+
+        footer .contact {
+            width: 28px;
+            height: 28px;
+            background-color: #333;
+            font-size: 28px;
+            border-radius: 50%;
+            opacity: 0.5;
+            /*text-align: center;*/
+            /*justify-items: center;*/
+        }
+
+        footer .contact ion-icon {
+            font-size: 20px;
+        }
+
+        footer .contact:hover{
+            font-weight: 300;
+            opacity: 0.9;
+            cursor: pointer;
+        }
+
+        footer .detail{
+            /*background-color: #e5c944;*/
+            background-color: #ccc;
+            display: none;
+            padding: 10px;
+            margin-top: -160px;
+            margin-left: -220px;
+            font-size: 18px;
+            color: #000;
+            text-align: left;
+            border-radius: 15px;
+            width: 260px;
+            height: 120px;
+        }
+
+        footer .contact:hover .detail {
+            display: block;
+        }
+    </style>
+</head>
+<header>
+    <img src="img//logo.png" alt="">
+    <h2>Cities</h2>
+</header>
+<body>
+
+<section>
+    <nav>
+        <button onclick="move_tab(1)"> Viet Nam <img src="img//vietnam_logo.png" alt="" ></button>
+        <br>
+        <button onclick="move_tab(2)"> England <img src="img//anh_logo.png" alt=""></button>
+        <br>
+        <button onclick="move_tab(3)"> France <img src="img//phap_logo.png" alt=""></button>
+    </nav>
+
+    <div class="content">
+        <div class="unactive citi active">
+            <h1>Hà Nội</h1>
+            <img src="img//hanoi.jpg">
+            <p><span>Hanoi</span> is a city that leaves me with many beautiful memories. I was born and raised here.
+                Thanks to that,
+                my personality and thoughts are boldly Hanoian. Looking at Hanoi people, people will see politeness,
+                politeness and human affection. If anyone has been in contact with Hanoi people, they will be attached
+                forever. Hanoi has ancient beauty but no less modern. Next to the nostalgic neighborhoods are busy
+                commercial centers. Hanoi city is one of the economic centers of the country. Hanoi cuisine is
+                excellent. Coming to Hanoi will not be boring because there are so many things that you can do. I really
+                like street food in Hanoi. The street vendors but the food is delicious and clean, the price is very
+                affordable. Hoan Kiem Lake is a famous place with many tourists. People can come here to walk and take
+                pictures as a souvenir. Every afternoon, there will be a lot of people jogging here to exercise. I like
+                the simple and peaceful street corners in the heart of the capital. Although I have been to many other
+                cities, I still remember Hanoi.</p>
+        </div>
+        <div class="unactive citi ">
+            <h1>London</h1>
+            <img src="img//London.jpg">
+            <p><span>London</span> is the capital city of England. It is the most populous city in the United Kingdom,
+                with a
+                metropolitan area of over 13 million inhabitants.</p>
+        </div>
+        <div class="unactive citi ">
+            <h1>Paris</h1>
+            <img src="img//Paris.jpg" alt="">
+            <p><span>Paris</span> is the capital city of Franch. It is the most populous city in the United Kingdom,
+                with a
+                metropolitan area of over 10 million inhabitants.</p>
+        </div>
+    </div>
+</section>
+</body>
+<footer>
+    <p>laptrinhweb.21130506.lab1</p>
+    <div class="contact">
+        <ion-icon name="globe-outline"></ion-icon>
+        <div class="detail">
+            <p><b>Mssv: </b>21130506</p> <br>
+            <p> <b>Name: </b>Nguyen Ngoc Quy</p> <br>
+            <p> <b>Khoa: </b>CNTT</p>
+        </div>
+    </div>
+</footer>
+<script>
+    function move_tab(params) {
+        let i = 1;
+        document.querySelectorAll('.unactive').forEach(item => {
+            if (i === params) {
+                if (!item.classList.contains("active")) {
+                    // window.alert(i)
+                    item.classList.add('active');
+                }
+            } else {
+                item.classList.remove('active');
+            }
+            i = i + 1;
+        })
+    }
+</script>
+</html>
+
